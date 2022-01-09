@@ -1,98 +1,90 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --accent-white-color: #ffffff;
+  --black-color: #000000;
+  --footer-bg-color: #2f303a;
+  --section-bg-color: #f5f4fa;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+}
 body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
-  width: 1600px;
-  background-color: #fff;
+  background-color: var(--accent-white-color);
+  color: var(--primary-text-color);
 }
-
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-text-color);
+}
 /* верхняя строка */
-.top-line {
-}
+
 .logo {
   font-family: 'Raleway', sans-serif;
-  color: #2196f3;
-  margin-left: 215px;
-  margin-top: 25px;
+  color: var(--accent-color);
   text-decoration: none;
-
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
 }
 .studio-top {
-  color: #000;
+  color: var(--black-color);
 }
-.top-line {
-}
-ul {
+
+.list {
   list-style: none;
 }
-.top-line-menu {
+.site-nav .link.current {
+  color: var(--accent-color);
 }
-.top-line-menu-item {
+.link {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: #212121;
+  color: var(--title-text-color);
 }
 .mail {
   text-decoration: none;
-  color: #757575;
+  color: var(--title-text-color);
 }
 .mail:hover,
-.top-line-menu-item:hover,
-.top-line-menu-item:active {
-  color: #2196f3;
+.mail:focus,
+.mail:active,
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--accent-color);
 }
 /* баннер */
-.banner {
-  height: 600px;
-  background-color: #2f303a;
+.hero {
+  background-color: var(--footer-bg-color);
 }
-.banner-text {
-  padding-top: 200px;
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  color: #fff;
+  color: var(--accent-white-color);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.banner-button {
-  margin-top: 30px;
-  margin-left: 700px;
-  width: 200px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
-  align-items: center;
-  background-color: #2196f3;
-  color: #fff;
-}
-/* особенности */
-.peculiarities {
-}
-.peculiarities-title {
-}
-.peculiarities-item {
-}
+
 .peculiarities-subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: #212121;
 }
 .peculiarities-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
-  color: #757575;
 }
 /* занятие */
 .title {
@@ -100,59 +92,86 @@ ul {
   font-size: 36px;
   line-height: 1.4;
   text-align: center;
-  color: #212121;
 }
 /* команда */
+.team {
+  background-color: var(--section-bg-color);
+}
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  color: #212121;
 }
-.team-spec {
+.team-prof {
   font-size: 16px;
   line-height: 1.19;
-  color: #757575;
 }
 /* футер */
 .footer {
   height: 252px;
-  background-color: #2f303a;
+  background-color: var(--footer-bg-color);
 }
 .studio-foot {
-  color: #fff;
+  color: var(--accent-white-color);
 }
 .address-foot {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.17px;
-  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  color: var(--footer-text-color);
 }
 .address-foot:hover,
 .address-foot:focus,
 .address-foot:active {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .address-post {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.17;
-  color: #ffffff;
+  text-decoration: none;
+  color: var(--accent-white-color);
+}
+.address-post:hover,
+.address-post:focus,
+.address-post:active {
+  color: var(--accent-color);
 }
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
 }
 .portfolio-text {
   font-size: 16px;
   line-height: 1.18;
-  color: #757575;
 }
-button {
+.button {
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+}
+.button.primary:hover,
+.button.primary:focus,
+.button.primary:active {
+  background: var(--accent-color);
+  color: var(--accent-white-color);
+}
+
+.button.primary {
+  background: var(--section-bg-color);
+  color: var(--title-text-color);
+}
+.button.secondary {
+  background: var(--accent-color);
+  color: var(--accent-white-color);
 }
